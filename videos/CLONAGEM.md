@@ -1,11 +1,11 @@
 # Voz da série
 
 ## Hoje
-`scripts/narrar.py` usa o **Piper** (`pt_BR-faber-medium`): gratuito, local e rápido. É uma voz
-genérica, sem clonagem, e só serve para validar ritmo, cortes e legenda. As tags do roteiro já
-controlam velocidade, volume e pausas.
-
-Para baixar a voz: `curl -LO https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx{,.json}`
+`scripts/narrar.py` usa o **Piper** com a voz `pt_BR-cadu-medium` (baixe com
+`scripts/baixar_voz.sh`): gratuita, local e rápida. Foi escolhida por medição: tom médio de
+~127 Hz, igual ao narrador da referência (128 Hz). A referência varia mais a entonação
+(≈98 Hz de faixa contra ≈55 Hz); as tags compensam com ritmo, volume e pausas.
+`--velocidade 0.64` deixa o ritmo perto de 3 palavras/s.
 
 ## Clonagem (próximo passo)
 Motor indicado: **Chatterbox Multilingual** (Resemble AI, licença MIT): fala português, clona a

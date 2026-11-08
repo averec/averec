@@ -1,6 +1,6 @@
 """Gera a narração de um roteiro com tags de entonação usando Piper (TTS local e gratuito).
 
-Uso: python3 scripts/narrar.py roteiros/ep01.md public/ep01/narracao.wav --modelo voz.onnx
+Uso: python3 scripts/narrar.py roteiros/ep01.md public/ep01/narracao.wav  (voz: scripts/baixar_voz.sh)
 
 Cada linha "[tag] texto" vira uma fala; a tag ajusta ritmo, volume e pausa depois da fala.
 "{exibido|falado}" separa o texto da legenda da pronúncia (ex.: {COAF|Coáfi}).
@@ -36,7 +36,9 @@ def falado(t): return re.sub(r"\{[^|}]*\|([^}]*)\}", r"\1", t)
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("roteiro"); ap.add_argument("saida"); ap.add_argument("--modelo", required=True)
+    ap.add_argument("roteiro"); ap.add_argument("saida"); ap.add_argument("--modelo", default="vozes/pt_BR-cadu-medium.onnx")
+    # A voz "cadu" fala devagar; 0,64 deixa o ritmo perto de 3 palavras/s, como a referência.
+    ap.add_argument("--velocidade", type=float, default=0.64, help="multiplica a duração das falas")
     a = ap.parse_args()
     voz = PiperVoice.load(a.modelo)
     sr = voz.config.sample_rate
@@ -45,7 +47,7 @@ def main():
         if tag == "pausa" and not texto:
             partes.append(np.zeros(int(sr * PAUSA), np.float32)); t += PAUSA; continue
         ls, vol, pausa = TAGS.get(tag, TAGS["sério"])
-        cfg = SynthesisConfig(length_scale=ls, volume=vol, noise_scale=0.6, noise_w_scale=0.8)
+        cfg = SynthesisConfig(length_scale=ls * a.velocidade, volume=vol, noise_scale=0.75, noise_w_scale=0.9)
         audio = np.concatenate([c.audio_float_array for c in voz.synthesize(falado(texto), syn_config=cfg)])
         partes += [audio, np.zeros(int(sr * pausa), np.float32)]
         dur = len(audio) / sr

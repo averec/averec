@@ -3,6 +3,7 @@ import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoCo
 import { COR, FONTE } from "./tema";
 import { Humor, Personagem } from "./Personagem";
 import { CenarioParede } from "./CenarioParede";
+import { CenarioBanco, CenarioEscritorio, CenarioRua } from "./Cenarios";
 
 export type Cenario = "parede" | "banco" | "rua" | "escritorio";
 
@@ -26,34 +27,9 @@ const FUNDOS: Record<Cenario, string> = {
 
 const Objetos: React.FC<{ cenario: Cenario }> = ({ cenario }) => {
   if (cenario === "parede") return <CenarioParede />;
-  if (cenario === "banco")
-    return (
-      <>
-        {[0, 1, 2, 3].map((i) => (
-          <div key={i} style={{ position: "absolute", top: 120, bottom: 520, left: 40 + i * 175, width: 70, background: "linear-gradient(90deg,#d8d2c4,#f6f1e6,#bfb7a6)", border: "6px solid #6d6556" }} />
-        ))}
-        <div style={{ position: "absolute", top: 70, left: 0, right: 0, height: 70, background: "#cfc7b6", borderBottom: "8px solid #6d6556" }} />
-        <div style={{ position: "absolute", top: 86, left: 0, right: 0, textAlign: "center", fontFamily: FONTE.titulo, fontWeight: 900, fontSize: 40, letterSpacing: 12, color: "#5b5446" }}>BANCO</div>
-      </>
-    );
-  if (cenario === "escritorio")
-    return (
-      <>
-        <div style={{ position: "absolute", top: 380, right: 60, width: 360, height: 250, background: "#0f1a22", border: "14px solid #222", borderRadius: 10 }}>
-          {[0, 1, 2, 3, 4, 5].map((i) => (
-            <div key={i} style={{ margin: "18px 20px 0", height: 16, background: i === 3 ? COR.rosa : "#3b6b8a", width: `${60 + ((i * 37) % 35)}%` }} />
-          ))}
-        </div>
-        <div style={{ position: "absolute", bottom: 420, left: 0, right: 0, height: 40, background: "#5b4636" }} />
-      </>
-    );
-  return (
-    <>
-      {[0, 1, 2].map((i) => (
-        <div key={i} style={{ position: "absolute", bottom: 420, left: 20 + i * 240, width: 200, height: 520 + i * 60, background: ["#9c4a32", "#b7a58a", "#7a4c3b"][i], border: "8px solid #3a2a20" }} />
-      ))}
-    </>
-  );
+  if (cenario === "banco") return <CenarioBanco />;
+  if (cenario === "escritorio") return <CenarioEscritorio />;
+  return <CenarioRua />;
 };
 
 export const Cena: React.FC<CenaProps> = ({ imagem, cenario, humor, zoomFinal = 1.12, close, etiqueta }) => {

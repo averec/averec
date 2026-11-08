@@ -51,8 +51,10 @@ e carimbos animados nos cartões.
   em negrito. Valores mudam com contador animado; suspeita fica rosa quando > 0.
 - **Legenda**: centralizada a ~70% da altura, 2–4 palavras por vez, branca em negrito com sombra;
   a palavra que ainda vai ser falada aparece em cinza e acende quando é dita.
-- **Personagem**: original da série (não copiar o da referência). Traço de desenho animado limpo,
-  cabeça grande, boné e moletom; cenários semi-realistas com luz neon rosa.
+- **Personagem**: sempre o mesmo em todos os episódios — a arte do usuário em
+  `public/personagem/bento.png` (moletom preto com coelho neon ciano, cabelo cacheado, estilo
+  bonequinho de blocos), animada por `PersonagemImagem` (quique, pulinhos, inclinação, tremor).
+  Novas expressões/poses entram como novas artes do usuário. Cenários desenhados com luz neon.
 
 ## Narração
 

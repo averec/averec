@@ -11,5 +11,10 @@
 
 ## Vídeos
 - O formato da série está em `videos/FORMATO.md`; a voz e a clonagem em `videos/CLONAGEM.md`.
-- Personagens e roteiros são originais: o reel de referência ensina a estrutura, não é copiado.
+- Personagem padrão de todos os episódios: a arte do próprio usuário em
+  `videos/public/personagem/bento.png` (cabelo cacheado preto, moletom preto com coelho neon
+  ciano, calça cargo preta, tênis preto e branco, estilo bonequinho de blocos). Usar sempre ele
+  pelo componente `PersonagemImagem`; não redesenhar nem trocar sem o usuário pedir.
+  Novas expressões ou poses só a partir de artes enviadas pelo usuário.
+- Roteiros são originais: o reel de referência ensina a estrutura, não é copiado.
 - Só clonar voz com autorização do dono da voz.

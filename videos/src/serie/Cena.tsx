@@ -2,11 +2,12 @@ import React from "react";
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { COR, FONTE } from "./tema";
 import { Humor, Personagem } from "./Personagem";
+import { CenarioParede } from "./CenarioParede";
 
 export type Cenario = "parede" | "banco" | "rua" | "escritorio";
 
 export type CenaProps = {
-  /** Ilustração em public/ (ex.: "ep01/cenas/motel.png"). Sem ela, desenha o placeholder. */
+  /** Ilustração em public/ (ex.: "ep01/cenas/parede.png"). Sem ela, desenha o placeholder. */
   imagem?: string;
   cenario: Cenario;
   humor?: Humor;
@@ -24,23 +25,7 @@ const FUNDOS: Record<Cenario, string> = {
 };
 
 const Objetos: React.FC<{ cenario: Cenario }> = ({ cenario }) => {
-  if (cenario === "parede")
-    return (
-      <>
-        {/* janela neon */}
-        <div style={{ position: "absolute", top: 160, left: 70, width: 260, height: 240, background: "repeating-linear-gradient(180deg,#ff6fb5 0 14px,#5a1838 14px 24px)", border: "10px solid #2b1a14", opacity: 0.9 }} />
-        {/* buraco na parede com maços de dinheiro */}
-        <div style={{ position: "absolute", top: 440, right: 60, width: 330, height: 300, background: "#1b0f0c", border: "12px solid #6e5546", borderRadius: "40% 30% 45% 25%", display: "flex", flexWrap: "wrap", alignContent: "flex-end", padding: 24, gap: 8 }}>
-          {Array.from({ length: 12 }).map((_, i) => (
-            <div key={i} style={{ width: 80, height: 40, background: "#7FB77E", border: "4px solid #2f5a2e", borderRadius: 4 }} />
-          ))}
-        </div>
-        {/* entulho */}
-        {[0, 1, 2, 3, 4].map((i) => (
-          <div key={i} style={{ position: "absolute", bottom: 360 + (i % 2) * 20, right: 80 + i * 60, width: 50, height: 34, background: "#8a7465", border: "5px solid #2b1a14", transform: `rotate(${i * 23}deg)` }} />
-        ))}
-      </>
-    );
+  if (cenario === "parede") return <CenarioParede />;
   if (cenario === "banco")
     return (
       <>

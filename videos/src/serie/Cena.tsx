@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { COR, FONTE } from "./tema";
 import type { Humor } from "./Personagem";
-import { PersonagemImagem } from "./PersonagemImagem";
+import { arteDoPersonagem, PersonagemImagem } from "./PersonagemImagem";
 import { CenarioParede } from "./CenarioParede";
 import { CenarioBanco, CenarioEscritorio, CenarioRua } from "./Cenarios";
 
@@ -18,6 +18,8 @@ export type CenaProps = {
   close?: boolean;
   /** Enquadramento da ilustração: ponto (0–1) para onde a câmera aproxima e zoom inicial. */
   foco?: { x: number; y: number; zoom: number };
+  /** Desenha o personagem também sobre a ilustração (quando ela não o traz). */
+  personagem?: boolean;
   etiqueta?: { titulo: string; sub?: string; x: number; y: number };
 };
 
@@ -35,11 +37,12 @@ const Objetos: React.FC<{ cenario: Cenario }> = ({ cenario }) => {
   return <CenarioRua />;
 };
 
-export const Cena: React.FC<CenaProps> = ({ imagem, cenario, humor, zoomFinal = 1.12, close, etiqueta, foco }) => {
+export const Cena: React.FC<CenaProps> = ({ imagem, cenario, humor, zoomFinal = 1.12, close, etiqueta, foco, personagem }) => {
   const f = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const base = foco?.zoom ?? 1;
   const zoom = interpolate(f, [0, durationInFrames], [base, base * zoomFinal]);
+  const busto = arteDoPersonagem(humor ?? "neutro", Boolean(close)).busto;
   const origem = foco ? `${foco.x * 100}% ${foco.y * 100}%` : "50% 50%";
   return (
     <AbsoluteFill style={{ background: "#000", overflow: "hidden" }}>
@@ -49,19 +52,22 @@ export const Cena: React.FC<CenaProps> = ({ imagem, cenario, humor, zoomFinal = 
         ) : (
           <AbsoluteFill style={{ background: FUNDOS[cenario] }}>
             <Objetos cenario={cenario} />
-            <div
-              style={{
-                position: "absolute",
-                left: "50%",
-                bottom: close ? -950 : 110,
-                transform: "translateX(-50%)",
-              }}
-            >
-              <PersonagemImagem humor={humor} altura={close ? 2300 : 900} />
-            </div>
+
           </AbsoluteFill>
         )}
       </AbsoluteFill>
+      {(!imagem || personagem) && (
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            bottom: close ? (busto ? -300 : -950) : 110,
+            transform: "translateX(-50%)",
+          }}
+        >
+          <PersonagemImagem humor={humor} close={close} altura={close ? (busto ? 1700 : 2300) : 900} />
+        </div>
+      )}
       {etiqueta && (
         <div
           style={{

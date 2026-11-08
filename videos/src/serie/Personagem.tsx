@@ -1,7 +1,7 @@
 import React from "react";
 import { interpolate, useCurrentFrame } from "remotion";
 
-export type Humor = "neutro" | "preocupado" | "esperto" | "assustado";
+export type Humor = "neutro" | "serio" | "preocupado" | "esperto" | "assustado" | "bravo" | "triste";
 
 // Bento em estilo "brinquedo de montar": personagem original da série (gorro vermelho,
 // bigode, jaqueta mostarda), com cabeça cilíndrica, corpo em bloco e mãos em C.
@@ -16,7 +16,7 @@ export const Personagem: React.FC<{ humor?: Humor; escala?: number }> = ({ humor
   // brinquedo não "respira": dá pulinhos curtos e secos
   const pulo = Math.abs(Math.sin(f / 9)) * -6;
   const piscar = f % 90 > 85 ? 0.15 : 1;
-  const sob = { neutro: 0, preocupado: 9, esperto: -7, assustado: 14 }[humor];
+  const sob = ({ neutro: 0, serio: 0, preocupado: 9, esperto: -7, assustado: 14, bravo: -10, triste: 9 } as const)[humor];
   const boca =
     humor === "esperto"
       ? "M -30 62 Q 0 82 34 56"

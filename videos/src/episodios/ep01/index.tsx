@@ -16,8 +16,9 @@ import legenda from "./legenda.json";
 const palavras = legenda as Palavra[];
 // Ilustração do usuário (já traz o personagem): cada plano escolhe um enquadramento.
 const PAREDE = "ep01/cenas/parede.jpg";
-const ROSTO = { x: 0.515, y: 0.56, zoom: 2.1 };
 const DINHEIRO = { x: 0.82, y: 0.45, zoom: 1.7 };
+// Parte alta da parede (sem o personagem da ilustração), para os closes com as expressões.
+const PAREDE_ALTO = { x: 0.75, y: 0, zoom: 2.2 };
 const em = ancora(palavras);
 
 // Cada bloco começa numa palavra da narração; trocar o roteiro move os cortes junto.
@@ -70,7 +71,7 @@ export const ep01: DadosEpisodio = {
   blocos: [
     { de: 0, tipo: "cena", cena: { cenario: "rua", humor: "neutro", zoomFinal: 1.18 } },
     { de: em("E", 1), tipo: "cena", cena: { cenario: "parede", imagem: PAREDE, foco: DINHEIRO, zoomFinal: 1.08 } },
-    { de: t.sorte, tipo: "cena", cena: { cenario: "parede", imagem: PAREDE, foco: ROSTO } },
+    { de: t.sorte, tipo: "cena", cena: { cenario: "parede", imagem: PAREDE, foco: PAREDE_ALTO, personagem: true, close: true, humor: "esperto", zoomFinal: 1.05 } },
     {
       de: t.tese,
       tipo: "cartao",
@@ -131,7 +132,7 @@ export const ep01: DadosEpisodio = {
         />
       ),
     },
-    { de: t.relogio, tipo: "cena", cena: { cenario: "parede", imagem: PAREDE, foco: ROSTO, zoomFinal: 1.15 }, hud: true },
+    { de: t.relogio, tipo: "cena", cena: { cenario: "parede", imagem: PAREDE, foco: PAREDE_ALTO, personagem: true, close: true, humor: "assustado", zoomFinal: 1.05 }, hud: true },
     {
       de: t.regra,
       tipo: "cartao",
@@ -188,7 +189,7 @@ export const ep01: DadosEpisodio = {
     {
       de: t.dep3,
       tipo: "cena",
-      cena: { cenario: "rua", humor: "preocupado", etiqueta: { titulo: "R$ 147.000", sub: "DEPÓSITO 3 · BANCO 3", x: 340, y: 760 } },
+      cena: { cenario: "rua", humor: "triste", etiqueta: { titulo: "R$ 147.000", sub: "DEPÓSITO 3 · BANCO 3", x: 340, y: 760 } },
       hud: true,
     },
     {
@@ -210,7 +211,7 @@ export const ep01: DadosEpisodio = {
       tipo: "cena",
       cena: {
         cenario: "escritorio",
-        humor: "preocupado",
+        humor: "bravo",
         etiqueta: { titulo: "DE ONDE VEIO?", sub: "DECLARAÇÃO DO IMPOSTO DE RENDA", x: 60, y: 300 },
       },
       hud: true,
@@ -223,7 +224,7 @@ export const ep01: DadosEpisodio = {
     {
       de: t.escolha,
       tipo: "cena",
-      cena: { cenario: "parede", imagem: PAREDE, foco: { x: 0.5, y: 0.55, zoom: 1.5 } },
+      cena: { cenario: "parede", imagem: PAREDE, foco: PAREDE_ALTO, personagem: true, close: true, humor: "preocupado", zoomFinal: 1.05 },
       hud: true,
       sobre: <Escolha rotulo="VOCÊ ESCOLHE" a="DEVOLVER" b="ARRISCAR" />,
     },

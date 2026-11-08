@@ -14,6 +14,10 @@ import {
 import legenda from "./legenda.json";
 
 const palavras = legenda as Palavra[];
+// Ilustração do usuário (já traz o personagem): cada plano escolhe um enquadramento.
+const PAREDE = "ep01/cenas/parede.jpg";
+const ROSTO = { x: 0.515, y: 0.56, zoom: 2.1 };
+const DINHEIRO = { x: 0.82, y: 0.45, zoom: 1.7 };
 const em = ancora(palavras);
 
 // Cada bloco começa numa palavra da narração; trocar o roteiro move os cortes junto.
@@ -65,14 +69,14 @@ export const ep01: DadosEpisodio = {
   ],
   blocos: [
     { de: 0, tipo: "cena", cena: { cenario: "rua", humor: "neutro", zoomFinal: 1.18 } },
-    { de: em("E", 1), tipo: "cena", cena: { cenario: "parede", humor: "assustado", zoomFinal: 1.1 } },
-    { de: t.sorte, tipo: "cena", cena: { cenario: "parede", humor: "esperto", close: true } },
+    { de: em("E", 1), tipo: "cena", cena: { cenario: "parede", imagem: PAREDE, foco: DINHEIRO, zoomFinal: 1.08 } },
+    { de: t.sorte, tipo: "cena", cena: { cenario: "parede", imagem: PAREDE, foco: ROSTO } },
     {
       de: t.tese,
       tipo: "cartao",
       cartao: <CartaoRegra rotulo="A REGRA DO JOGO" texto="Todo real deixa rastro." />,
     },
-    { de: t.p1, tipo: "cena", cena: { cenario: "parede", humor: "neutro" }, hud: true, rotuloHud: "PROBLEMA 1" },
+    { de: t.p1, tipo: "cena", cena: { cenario: "parede", imagem: PAREDE, zoomFinal: 1.1 }, hud: true, rotuloHud: "PROBLEMA 1" },
     {
       de: t.lei,
       tipo: "cartao",
@@ -91,8 +95,8 @@ export const ep01: DadosEpisodio = {
       tipo: "cena",
       cena: {
         cenario: "parede",
-        humor: "esperto",
-        close: true,
+        imagem: PAREDE,
+        foco: DINHEIRO,
         etiqueta: { titulo: "NOTA DE R$ 100", sub: "SÉRIE ATUAL · GAROUPA", x: 60, y: 300 },
       },
       hud: true,
@@ -110,7 +114,7 @@ export const ep01: DadosEpisodio = {
         />
       ),
     },
-    { de: t.p2, tipo: "cena", cena: { cenario: "parede", humor: "preocupado" }, hud: true, rotuloHud: "PROBLEMA 2" },
+    { de: t.p2, tipo: "cena", cena: { cenario: "parede", imagem: PAREDE, foco: { x: 0.5, y: 0.6, zoom: 1.3 } }, hud: true, rotuloHud: "PROBLEMA 2" },
     {
       de: t.prazo,
       tipo: "cartao",
@@ -127,7 +131,7 @@ export const ep01: DadosEpisodio = {
         />
       ),
     },
-    { de: t.relogio, tipo: "cena", cena: { cenario: "parede", humor: "assustado", close: true }, hud: true },
+    { de: t.relogio, tipo: "cena", cena: { cenario: "parede", imagem: PAREDE, foco: ROSTO, zoomFinal: 1.15 }, hud: true },
     {
       de: t.regra,
       tipo: "cartao",
@@ -219,7 +223,7 @@ export const ep01: DadosEpisodio = {
     {
       de: t.escolha,
       tipo: "cena",
-      cena: { cenario: "parede", humor: "preocupado", close: true },
+      cena: { cenario: "parede", imagem: PAREDE, foco: { x: 0.5, y: 0.55, zoom: 1.5 } },
       hud: true,
       sobre: <Escolha rotulo="VOCÊ ESCOLHE" a="DEVOLVER" b="ARRISCAR" />,
     },

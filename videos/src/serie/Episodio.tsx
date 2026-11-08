@@ -3,7 +3,6 @@ import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, useVideoCon
 import { Cena, CenaProps } from "./Cena";
 import { EstadoHud, Hud } from "./Hud";
 import { Legenda, Palavra } from "./Legenda";
-import { FalaContext } from "./PersonagemImagem";
 
 export type Bloco =
   | { de: number; tipo: "cena"; cena: CenaProps; hud?: boolean; rotuloHud?: string; sobre?: React.ReactNode }
@@ -47,11 +46,11 @@ export const Episodio: React.FC<{ dados: DadosEpisodio }> = ({ dados }) => {
         return (
           <Sequence key={i} from={from} durationInFrames={dur} name={b.tipo === "cena" ? `cena ${b.cena.cenario}` : "cartão"}>
             {b.tipo === "cena" ? (
-              <FalaContext.Provider value={{ palavras: dados.palavras, inicio: b.de }}>
+              <>
                 <Cena {...b.cena} />
                 {b.hud && <Hud marcos={dados.hud} inicio={b.de} rotulo={b.rotuloHud} />}
                 {b.sobre}
-              </FalaContext.Provider>
+              </>
             ) : (
               b.cartao
             )}

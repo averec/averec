@@ -16,6 +16,8 @@ export type CenaProps = {
   /** Zoom lento: 1 → zoomFinal ao longo do plano. */
   zoomFinal?: number;
   close?: boolean;
+  /** Enquadramento da ilustração: ponto (0–1) para onde a câmera aproxima e zoom inicial. */
+  foco?: { x: number; y: number; zoom: number };
   etiqueta?: { titulo: string; sub?: string; x: number; y: number };
 };
 
@@ -33,13 +35,15 @@ const Objetos: React.FC<{ cenario: Cenario }> = ({ cenario }) => {
   return <CenarioRua />;
 };
 
-export const Cena: React.FC<CenaProps> = ({ imagem, cenario, humor, zoomFinal = 1.12, close, etiqueta }) => {
+export const Cena: React.FC<CenaProps> = ({ imagem, cenario, humor, zoomFinal = 1.12, close, etiqueta, foco }) => {
   const f = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
-  const zoom = interpolate(f, [0, durationInFrames], [1, zoomFinal]);
+  const base = foco?.zoom ?? 1;
+  const zoom = interpolate(f, [0, durationInFrames], [base, base * zoomFinal]);
+  const origem = foco ? `${foco.x * 100}% ${foco.y * 100}%` : "50% 50%";
   return (
     <AbsoluteFill style={{ background: "#000", overflow: "hidden" }}>
-      <AbsoluteFill style={{ transform: `scale(${zoom})` }}>
+      <AbsoluteFill style={{ transform: `scale(${zoom})`, transformOrigin: origem }}>
         {imagem ? (
           <Img src={staticFile(imagem)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         ) : (

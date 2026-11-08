@@ -1,0 +1,182 @@
+[
+{
+"tag": "sério",
+"texto": "Você acabou de comprar uma casa velha.",
+"s": 0.0,
+"e": 1.974
+},
+{
+"tag": "irônico",
+"texto": "E, quebrando uma parede, acha dois milhões de reais em dinheiro vivo.",
+"s": 2.224,
+"e": 5.858
+},
+{
+"tag": "suspense",
+"texto": "Parece sorte. Só que tem um detalhe.",
+"s": 6.158,
+"e": 8.445
+},
+{
+"tag": "ênfase",
+"texto": "Todo real deixa rastro.",
+"s": 8.895,
+"e": 10.392
+},
+{
+"tag": "sério",
+"texto": "Problema um: esse dinheiro não é tesouro.",
+"s": 11.192,
+"e": 13.363
+},
+{
+"tag": "sério",
+"texto": "Pela lei, tesouro é algo tão antigo que ninguém lembra do dono.",
+"s": 13.613,
+"e": 17.015
+},
+{
+"tag": "irônico",
+"texto": "Essas notas têm a cara da garoupa. Alguém lembra.",
+"s": 17.265,
+"e": 20.098
+},
+{
+"tag": "ênfase",
+"texto": "Isso é coisa achada. E coisa achada tem dono.",
+"s": 20.398,
+"e": 23.289
+},
+{
+"tag": "sério",
+"texto": "Problema dois: o prazo.",
+"s": 24.089,
+"e": 25.633
+},
+{
+"tag": "sério",
+"texto": "Quem acha e não devolve em quinze dias comete crime.",
+"s": 25.883,
+"e": 28.472
+},
+{
+"tag": "suspense",
+"texto": "Chama apropriação de coisa achada. Está no Código Penal.",
+"s": 28.722,
+"e": 31.996
+},
+{
+"tag": "sussurro",
+"texto": "E o relógio já está correndo.",
+"s": 32.446,
+"e": 34.269
+},
+{
+"tag": "ênfase",
+"texto": "Regra um: dinheiro achado não é dinheiro ganho.",
+"s": 34.619,
+"e": 37.184
+},
+{
+"tag": "sério",
+"texto": "Dia dois. Você resolve guardar no banco.",
+"s": 37.984,
+"e": 40.388
+},
+{
+"tag": "irônico",
+"texto": "Vinte mil notas de cem. Vinte quilos numa mochila.",
+"s": 40.638,
+"e": 43.505
+},
+{
+"tag": "suspense",
+"texto": "O que você não sabe:",
+"s": 43.805,
+"e": 45.117
+},
+{
+"tag": "sério",
+"texto": "todo depósito em espécie a partir de cinquenta mil reais",
+"s": 45.567,
+"e": 48.528
+},
+{
+"tag": "ênfase",
+"texto": "é comunicado ao COAF. Automaticamente.",
+"s": 48.778,
+"e": 51.181
+},
+{
+"tag": "ênfase",
+"texto": "Toda vez.",
+"s": 51.531,
+"e": 52.297
+},
+{
+"tag": "irônico",
+"texto": "Aí você fica esperto. Quarenta e nove mil, cada dia num banco.",
+"s": 52.647,
+"e": 56.571
+},
+{
+"tag": "rápido",
+"texto": "Quarenta e nove. Noventa e oito. Cento e quarenta e sete.",
+"s": 56.871,
+"e": 60.343
+},
+{
+"tag": "suspense",
+"texto": "Só que esse padrão tem nome.",
+"s": 60.943,
+"e": 62.452
+},
+{
+"tag": "ênfase",
+"texto": "Fracionamento.",
+"s": 62.902,
+"e": 63.866
+},
+{
+"tag": "sério",
+"texto": "É exatamente o que o banco foi treinado para procurar.",
+"s": 64.216,
+"e": 67.072
+},
+{
+"tag": "sério",
+"texto": "E no ano que vem, a Receita vai perguntar de onde veio.",
+"s": 67.322,
+"e": 70.12
+},
+{
+"tag": "sério",
+"texto": "Dia três. Um milhão e oitocentos mil escondidos em casa.",
+"s": 70.82,
+"e": 74.129
+},
+{
+"tag": "irônico",
+"texto": "E nenhuma explicação.",
+"s": 74.379,
+"e": 75.609
+},
+{
+"tag": "suspense",
+"texto": "Você pode devolver e ficar com a recompensa. Ou pode arriscar.",
+"s": 75.909,
+"e": 79.891
+},
+{
+"tag": "ênfase",
+"texto": "Comenta: devolver ou arriscar.",
+"s": 80.341,
+"e": 82.176
+},
+{
+"tag": "sério",
+"texto": "A parte dois segue o que você escolher.",
+"s": 82.526,
+"e": 84.372
+}
+]

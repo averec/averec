@@ -20,4 +20,9 @@
   escolhe a arte. Animação: quique de entrada, pulinhos, inclinação e tremor (sem boca/piscar).
   Novas expressões ou poses só a partir de artes enviadas pelo usuário.
 - Roteiros são originais: o reel de referência ensina a estrutura, não é copiado.
+- Voz da série: a mesma da locução do ep. 01 (`videos/public/ep01/narracao.wav`), gerada pelo
+  usuário fora do projeto. Para cada episódio o usuário manda o áudio pronto; eu removo
+  marcações lidas em voz alta (ex.: "sério", "irônico", "pausa"), rodo
+  `scripts/transcrever.py` + `scripts/alinhar_locucao.py` e exporto. Não usar a voz Piper nos
+  episódios publicados (só para testar ritmo antes do áudio chegar).
 - Só clonar voz com autorização do dono da voz.

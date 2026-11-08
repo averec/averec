@@ -1,5 +1,16 @@
 # Voz da série
 
+## Voz oficial
+A partir do ep. 01, a narração é a locução que o usuário gera fora do projeto, sempre com a mesma
+voz (referência: `public/ep01/narracao.wav`). Fluxo por episódio:
+1. Usuário envia o áudio do roteiro (de preferência sem as tags entre colchetes no texto).
+2. Se a ferramenta leu alguma tag em voz alta, cortar essas palavras nos silêncios.
+3. `python3 -I scripts/transcrever.py public/epNN/narracao.wav public/epNN/palavras.json`
+4. `python3 scripts/alinhar_locucao.py roteiros/epNN.md public/epNN/palavras.json src/episodios/epNN/legenda.json`
+5. Exportar com Remotion.
+
+## Voz de teste (Piper)
+
 ## Hoje
 `scripts/narrar.py` usa o **Piper** com a voz `pt_BR-cadu-medium` (baixe com
 `scripts/baixar_voz.sh`): gratuita, local e rápida. Foi escolhida por medição: tom médio de

@@ -1,7 +1,8 @@
 import React from "react";
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { COR, FONTE } from "./tema";
-import { Humor, Personagem } from "./Personagem";
+import type { Humor } from "./Personagem";
+import { PersonagemImagem } from "./PersonagemImagem";
 import { CenarioParede } from "./CenarioParede";
 import { CenarioBanco, CenarioEscritorio, CenarioRua } from "./Cenarios";
 
@@ -36,7 +37,6 @@ export const Cena: React.FC<CenaProps> = ({ imagem, cenario, humor, zoomFinal = 
   const f = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const zoom = interpolate(f, [0, durationInFrames], [1, zoomFinal]);
-  const entrada = interpolate(f, [0, 6], [0.92, 1], { extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ background: "#000", overflow: "hidden" }}>
       <AbsoluteFill style={{ transform: `scale(${zoom})` }}>
@@ -49,12 +49,11 @@ export const Cena: React.FC<CenaProps> = ({ imagem, cenario, humor, zoomFinal = 
               style={{
                 position: "absolute",
                 left: "50%",
-                bottom: close ? -300 : 120,
-                transform: `translateX(-50%) scale(${(close ? 1.7 : 0.8) * entrada})`,
-                transformOrigin: "bottom center",
+                bottom: close ? -950 : 110,
+                transform: "translateX(-50%)",
               }}
             >
-              <Personagem humor={humor} />
+              <PersonagemImagem humor={humor} altura={close ? 2300 : 900} />
             </div>
           </AbsoluteFill>
         )}

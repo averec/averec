@@ -15,7 +15,7 @@ def norm(w):
 roteiro, medidas_p, saida = sys.argv[1:4]
 script = []  # (palavra exibida, fala, tag)
 fala = 0
-for linha in open(roteiro, encoding="utf-8"):
+for linha in re.sub(r"<!--.*?-->", "", open(roteiro, encoding="utf-8").read(), flags=re.S).splitlines():
     linha = linha.strip()
     if not linha or linha.startswith(("#", "<!--")):
         continue

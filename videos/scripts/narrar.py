@@ -23,7 +23,8 @@ TAGS = {
 PAUSA = 0.45
 
 def falas(caminho):
-    for linha in open(caminho, encoding="utf-8"):
+    texto = re.sub(r"<!--.*?-->", "", open(caminho, encoding="utf-8").read(), flags=re.S)
+    for linha in texto.splitlines():
         linha = linha.strip()
         if not linha or linha.startswith(("#", "<!--")):
             continue

@@ -68,6 +68,15 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{ audio: "pisa/mix.wav" }}
       />
+      <Composition
+        id="PisaFinal"
+        component={PisaShort}
+        durationInFrames={PISA_FRAMES}
+        fps={FPS}
+        width={1080}
+        height={1920}
+        defaultProps={{ audio: "pisa/mix.wav", legenda: true }}
+      />
       <Composition id="PisaLegenda" component={LegendaPisa} durationInFrames={PISA_FRAMES} fps={FPS} width={1080} height={1920} />
       <Still id="CapaEp02" component={CapaEp02} width={1080} height={1920} />
       <Still id="CapaEp01" component={CapaEp01} width={1080} height={1920} />

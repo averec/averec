@@ -11,6 +11,7 @@ import { InkPass, noInkFallback } from "./kit/ink";
 import { LensBlur } from "./kit/lensblur";
 import { GradeEffect, GRADES, GRADE_STRENGTH, gradeFor } from "./kit/grade";
 import { planoEm, TOTAL, FLASH_AT } from "./historia";
+import { LegendaPisa } from "./LegendaPisa";
 
 export const PISA_FRAMES = TOTAL;
 const fwd = new THREE.Vector3(), alvo = new THREE.Vector3();
@@ -54,7 +55,7 @@ const Cena: React.FC = () => {
   );
 };
 
-export const PisaShort: React.FC<{ audio?: string }> = ({ audio }) => {
+export const PisaShort: React.FC<{ audio?: string; legenda?: boolean }> = ({ audio, legenda }) => {
   const q = useCurrentFrame();
   const flash = q >= FLASH_AT && q < FLASH_AT + 6 ? [1, 0.85, 0.65, 0.45, 0.25, 0.1][q - FLASH_AT] : 0;
   return (
@@ -63,6 +64,7 @@ export const PisaShort: React.FC<{ audio?: string }> = ({ audio }) => {
         <Cena />
       </ThreeCanvas>
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
+      {legenda && <LegendaPisa />}
       {audio && <Audio src={staticFile(audio)} />}
     </AbsoluteFill>
   );

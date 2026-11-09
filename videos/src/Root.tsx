@@ -8,6 +8,7 @@ import { ep02 } from "./episodios/ep02";
 import { Capa } from "./serie/Chamadas";
 import { Cena } from "./serie/Cena";
 import { PisaShort, PISA_FRAMES } from "./videos/pisa/Pisa";
+import { LegendaPisa } from "./videos/pisa/LegendaPisa";
 
 const espera = delayRender("fontes");
 carregarFontes().then(() => continueRender(espera));
@@ -67,6 +68,7 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{ audio: "pisa/mix.wav" }}
       />
+      <Composition id="PisaLegenda" component={LegendaPisa} durationInFrames={PISA_FRAMES} fps={FPS} width={1080} height={1920} />
       <Still id="CapaEp02" component={CapaEp02} width={1080} height={1920} />
       <Still id="CapaEp01" component={CapaEp01} width={1080} height={1920} />
     </>

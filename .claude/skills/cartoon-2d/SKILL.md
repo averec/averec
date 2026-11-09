@@ -1,11 +1,11 @@
 ---
-name: cartoon-audio-short
+name: cartoon-2d
 description: Faz um desenho animado vertical curto (1080x1920, 30 fps). Oferece 10 ideias, escreve o roteiro e transforma a locução do usuário num MP4 pronto, com trilha e efeitos sonoros a 50% do nível da voz. Use para qualquer pedido de desenho animado curto ou história animada.
 ---
 
 # Desenho animado curto: ideia → roteiro → locução → MP4
 
-Versão em português, adaptada do PDF "cartoon-audio-short" enviado pelo usuário. O PDF descreve
+Skill "cartoon-2d": versão em português, adaptada do PDF "cartoon-audio-short" enviado pelo usuário. O PDF descreve
 um `kit/` (motor, ferramentas e exemplo) que **não veio junto**. O `kit/` desta pasta é o código
 aberto de onde ele deriva: `mromidev/claude-animated-shorts` (licença MIT, ver `kit/LICENSE`),
 que faz o mesmo visual com three.js dentro do Remotion. Onde o PDF cita uma ferramenta que não

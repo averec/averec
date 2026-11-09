@@ -5,5 +5,8 @@ mundo 3D colorido com contorno preto, texturas pintadas, profundidade de campo e
 deslizando. 1080×1920, 30 fps, duração exata da locução, voz sem edição, trilha e efeitos
 sintetizados a 50% do nível da voz (mix.py), sem legenda.
 
-Status: o texto da skill chegou incompleto (parou no Estágio 2). Faltam os Estágios 2–4 completos
-e o `mix.py` para instalar a skill de verdade.
+Status: skill instalada em `.claude/skills/cartoon-audio-short/` a partir do PDF do usuário
+(reescrita em português). O `kit/` citado no PDF não veio; no lugar está o código aberto de onde
+ele deriva, `mromidev/claude-animated-shorts` (MIT), que faz o visual com three.js no Remotion.
+Dependências 3D instaladas em `videos/` (three, @remotion/three, @react-three/fiber,
+@react-three/postprocessing, postprocessing).

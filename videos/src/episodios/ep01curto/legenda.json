@@ -1,0 +1,1290 @@
+[
+{
+"w": "Você",
+"s": 0.0,
+"e": 0.2,
+"fala": 0,
+"tag": "sério"
+},
+{
+"w": "acabou",
+"s": 0.2,
+"e": 0.4,
+"fala": 0,
+"tag": "sério"
+},
+{
+"w": "de",
+"s": 0.4,
+"e": 0.52,
+"fala": 0,
+"tag": "sério"
+},
+{
+"w": "comprar",
+"s": 0.52,
+"e": 0.7,
+"fala": 0,
+"tag": "sério"
+},
+{
+"w": "uma",
+"s": 0.7,
+"e": 0.86,
+"fala": 0,
+"tag": "sério"
+},
+{
+"w": "casa",
+"s": 0.86,
+"e": 1.04,
+"fala": 0,
+"tag": "sério"
+},
+{
+"w": "velha.",
+"s": 1.04,
+"e": 1.46,
+"fala": 0,
+"tag": "sério"
+},
+{
+"w": "E,",
+"s": 1.46,
+"e": 1.9,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "quebrando",
+"s": 1.9,
+"e": 2.18,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "uma",
+"s": 2.18,
+"e": 2.34,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "parede,",
+"s": 2.34,
+"e": 2.68,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "acha",
+"s": 2.82,
+"e": 2.98,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "dois",
+"s": 2.98,
+"e": 3.32,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "milhões",
+"s": 3.32,
+"e": 3.64,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "de",
+"s": 3.64,
+"e": 3.64,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "reais",
+"s": 3.64,
+"e": 3.64,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "em",
+"s": 3.64,
+"e": 4.18,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "dinheiro",
+"s": 4.18,
+"e": 4.46,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "vivo.",
+"s": 4.46,
+"e": 4.72,
+"fala": 1,
+"tag": "irônico"
+},
+{
+"w": "Parece",
+"s": 5.18,
+"e": 5.42,
+"fala": 2,
+"tag": "suspense"
+},
+{
+"w": "sorte.",
+"s": 5.42,
+"e": 5.74,
+"fala": 2,
+"tag": "suspense"
+},
+{
+"w": "Só",
+"s": 6.3,
+"e": 6.54,
+"fala": 2,
+"tag": "suspense"
+},
+{
+"w": "que",
+"s": 6.54,
+"e": 6.64,
+"fala": 2,
+"tag": "suspense"
+},
+{
+"w": "tem",
+"s": 6.64,
+"e": 6.74,
+"fala": 2,
+"tag": "suspense"
+},
+{
+"w": "um",
+"s": 6.74,
+"e": 6.8,
+"fala": 2,
+"tag": "suspense"
+},
+{
+"w": "detalhe.",
+"s": 6.8,
+"e": 7.14,
+"fala": 2,
+"tag": "suspense"
+},
+{
+"w": "Todo",
+"s": 7.74,
+"e": 7.9,
+"fala": 3,
+"tag": "ênfase"
+},
+{
+"w": "real",
+"s": 8.02,
+"e": 8.16,
+"fala": 3,
+"tag": "ênfase"
+},
+{
+"w": "deixa",
+"s": 8.16,
+"e": 8.38,
+"fala": 3,
+"tag": "ênfase"
+},
+{
+"w": "rastro.",
+"s": 8.38,
+"e": 8.74,
+"fala": 3,
+"tag": "ênfase"
+},
+{
+"w": "Problema",
+"s": 9.56,
+"e": 9.9,
+"fala": 4,
+"tag": "sério"
+},
+{
+"w": "um:",
+"s": 9.9,
+"e": 10.32,
+"fala": 4,
+"tag": "sério"
+},
+{
+"w": "o",
+"s": 10.32,
+"e": 10.32,
+"fala": 4,
+"tag": "sério"
+},
+{
+"w": "prazo.",
+"s": 10.32,
+"e": 10.66,
+"fala": 4,
+"tag": "sério"
+},
+{
+"w": "Quem",
+"s": 11.2,
+"e": 11.28,
+"fala": 5,
+"tag": "sério"
+},
+{
+"w": "acha",
+"s": 11.28,
+"e": 11.58,
+"fala": 5,
+"tag": "sério"
+},
+{
+"w": "e",
+"s": 11.58,
+"e": 11.68,
+"fala": 5,
+"tag": "sério"
+},
+{
+"w": "não",
+"s": 11.68,
+"e": 11.74,
+"fala": 5,
+"tag": "sério"
+},
+{
+"w": "devolve",
+"s": 11.74,
+"e": 12.0,
+"fala": 5,
+"tag": "sério"
+},
+{
+"w": "em",
+"s": 12.0,
+"e": 12.14,
+"fala": 5,
+"tag": "sério"
+},
+{
+"w": "quinze",
+"s": 12.14,
+"e": 12.3,
+"fala": 5,
+"tag": "sério"
+},
+{
+"w": "dias",
+"s": 12.3,
+"e": 12.6,
+"fala": 5,
+"tag": "sério"
+},
+{
+"w": "comete",
+"s": 12.78,
+"e": 12.9,
+"fala": 5,
+"tag": "sério"
+},
+{
+"w": "crime.",
+"s": 12.9,
+"e": 13.16,
+"fala": 5,
+"tag": "sério"
+},
+{
+"w": "Chama",
+"s": 13.58,
+"e": 13.76,
+"fala": 6,
+"tag": "suspense"
+},
+{
+"w": "apropriação",
+"s": 13.9,
+"e": 14.36,
+"fala": 6,
+"tag": "suspense"
+},
+{
+"w": "de",
+"s": 14.36,
+"e": 14.46,
+"fala": 6,
+"tag": "suspense"
+},
+{
+"w": "coisa",
+"s": 14.46,
+"e": 14.6,
+"fala": 6,
+"tag": "suspense"
+},
+{
+"w": "achada.",
+"s": 14.6,
+"e": 15.02,
+"fala": 6,
+"tag": "suspense"
+},
+{
+"w": "Está",
+"s": 15.32,
+"e": 15.5,
+"fala": 6,
+"tag": "suspense"
+},
+{
+"w": "no",
+"s": 15.5,
+"e": 15.58,
+"fala": 6,
+"tag": "suspense"
+},
+{
+"w": "Código",
+"s": 15.58,
+"e": 15.78,
+"fala": 6,
+"tag": "suspense"
+},
+{
+"w": "Penal.",
+"s": 15.78,
+"e": 16.02,
+"fala": 6,
+"tag": "suspense"
+},
+{
+"w": "E",
+"s": 16.72,
+"e": 16.8,
+"fala": 7,
+"tag": "sussurro"
+},
+{
+"w": "o",
+"s": 16.8,
+"e": 16.8,
+"fala": 7,
+"tag": "sussurro"
+},
+{
+"w": "relógio",
+"s": 16.8,
+"e": 17.02,
+"fala": 7,
+"tag": "sussurro"
+},
+{
+"w": "já",
+"s": 17.02,
+"e": 17.16,
+"fala": 7,
+"tag": "sussurro"
+},
+{
+"w": "está",
+"s": 17.16,
+"e": 17.24,
+"fala": 7,
+"tag": "sussurro"
+},
+{
+"w": "correndo.",
+"s": 17.24,
+"e": 17.48,
+"fala": 7,
+"tag": "sussurro"
+},
+{
+"w": "Regra",
+"s": 18.22,
+"e": 18.5,
+"fala": 8,
+"tag": "ênfase"
+},
+{
+"w": "um:",
+"s": 18.5,
+"e": 18.98,
+"fala": 8,
+"tag": "ênfase"
+},
+{
+"w": "dinheiro",
+"s": 18.98,
+"e": 19.18,
+"fala": 8,
+"tag": "ênfase"
+},
+{
+"w": "achado",
+"s": 19.18,
+"e": 19.5,
+"fala": 8,
+"tag": "ênfase"
+},
+{
+"w": "não",
+"s": 19.5,
+"e": 19.86,
+"fala": 8,
+"tag": "ênfase"
+},
+{
+"w": "é",
+"s": 19.86,
+"e": 20.02,
+"fala": 8,
+"tag": "ênfase"
+},
+{
+"w": "dinheiro",
+"s": 20.02,
+"e": 20.22,
+"fala": 8,
+"tag": "ênfase"
+},
+{
+"w": "ganho.",
+"s": 20.22,
+"e": 20.5,
+"fala": 8,
+"tag": "ênfase"
+},
+{
+"w": "Dia",
+"s": 20.5,
+"e": 21.089,
+"fala": 9,
+"tag": "sério"
+},
+{
+"w": "dois.",
+"s": 21.089,
+"e": 21.913,
+"fala": 9,
+"tag": "sério"
+},
+{
+"w": "Você",
+"s": 21.913,
+"e": 22.62,
+"fala": 9,
+"tag": "sério"
+},
+{
+"w": "resolve",
+"s": 22.62,
+"e": 22.82,
+"fala": 9,
+"tag": "sério"
+},
+{
+"w": "guardar",
+"s": 22.82,
+"e": 23.1,
+"fala": 9,
+"tag": "sério"
+},
+{
+"w": "no",
+"s": 23.1,
+"e": 23.2,
+"fala": 9,
+"tag": "sério"
+},
+{
+"w": "banco.",
+"s": 23.2,
+"e": 23.4,
+"fala": 9,
+"tag": "sério"
+},
+{
+"w": "O",
+"s": 23.8,
+"e": 23.94,
+"fala": 10,
+"tag": "suspense"
+},
+{
+"w": "que",
+"s": 23.94,
+"e": 24.0,
+"fala": 10,
+"tag": "suspense"
+},
+{
+"w": "você",
+"s": 24.0,
+"e": 24.14,
+"fala": 10,
+"tag": "suspense"
+},
+{
+"w": "não",
+"s": 24.14,
+"e": 24.24,
+"fala": 10,
+"tag": "suspense"
+},
+{
+"w": "sabe:",
+"s": 24.24,
+"e": 24.44,
+"fala": 10,
+"tag": "suspense"
+},
+{
+"w": "todo",
+"s": 24.92,
+"e": 25.18,
+"fala": 11,
+"tag": "sério"
+},
+{
+"w": "depósito",
+"s": 25.18,
+"e": 25.6,
+"fala": 11,
+"tag": "sério"
+},
+{
+"w": "em",
+"s": 25.6,
+"e": 25.7,
+"fala": 11,
+"tag": "sério"
+},
+{
+"w": "espécie",
+"s": 25.7,
+"e": 25.98,
+"fala": 11,
+"tag": "sério"
+},
+{
+"w": "a",
+"s": 25.98,
+"e": 26.08,
+"fala": 11,
+"tag": "sério"
+},
+{
+"w": "partir",
+"s": 26.08,
+"e": 26.2,
+"fala": 11,
+"tag": "sério"
+},
+{
+"w": "de",
+"s": 26.2,
+"e": 26.4,
+"fala": 11,
+"tag": "sério"
+},
+{
+"w": "cinquenta",
+"s": 26.4,
+"e": 26.74,
+"fala": 11,
+"tag": "sério"
+},
+{
+"w": "mil",
+"s": 26.74,
+"e": 26.96,
+"fala": 11,
+"tag": "sério"
+},
+{
+"w": "reais",
+"s": 26.96,
+"e": 26.96,
+"fala": 11,
+"tag": "sério"
+},
+{
+"w": "é",
+"s": 26.96,
+"e": 27.58,
+"fala": 12,
+"tag": "ênfase"
+},
+{
+"w": "comunicado",
+"s": 27.58,
+"e": 28.08,
+"fala": 12,
+"tag": "ênfase"
+},
+{
+"w": "ao",
+"s": 28.08,
+"e": 28.22,
+"fala": 12,
+"tag": "ênfase"
+},
+{
+"w": "COAF.",
+"s": 28.22,
+"e": 28.48,
+"fala": 12,
+"tag": "ênfase"
+},
+{
+"w": "Automaticamente.",
+"s": 28.74,
+"e": 29.44,
+"fala": 12,
+"tag": "ênfase"
+},
+{
+"w": "Toda",
+"s": 29.84,
+"e": 30.08,
+"fala": 13,
+"tag": "ênfase"
+},
+{
+"w": "vez.",
+"s": 30.08,
+"e": 30.3,
+"fala": 13,
+"tag": "ênfase"
+},
+{
+"w": "Aí",
+"s": 31.06,
+"e": 31.2,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "você",
+"s": 31.2,
+"e": 31.28,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "fica",
+"s": 31.28,
+"e": 31.38,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "esperto.",
+"s": 31.38,
+"e": 31.72,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "Quarenta",
+"s": 31.72,
+"e": 32.015,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "e",
+"s": 32.015,
+"e": 32.103,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "nove",
+"s": 32.103,
+"e": 32.28,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "mil,",
+"s": 32.28,
+"e": 32.6,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "cada",
+"s": 32.6,
+"e": 33.0,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "dia",
+"s": 33.0,
+"e": 33.24,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "num",
+"s": 33.24,
+"e": 33.36,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "banco.",
+"s": 33.36,
+"e": 33.58,
+"fala": 14,
+"tag": "irônico"
+},
+{
+"w": "Quarenta",
+"s": 33.58,
+"e": 33.922,
+"fala": 15,
+"tag": "rápido"
+},
+{
+"w": "e",
+"s": 33.922,
+"e": 34.025,
+"fala": 15,
+"tag": "rápido"
+},
+{
+"w": "nove.",
+"s": 34.025,
+"e": 34.264,
+"fala": 15,
+"tag": "rápido"
+},
+{
+"w": "Noventa",
+"s": 34.264,
+"e": 34.572,
+"fala": 15,
+"tag": "rápido"
+},
+{
+"w": "e",
+"s": 34.572,
+"e": 34.674,
+"fala": 15,
+"tag": "rápido"
+},
+{
+"w": "oito.",
+"s": 34.674,
+"e": 34.914,
+"fala": 15,
+"tag": "rápido"
+},
+{
+"w": "Cento",
+"s": 34.914,
+"e": 35.153,
+"fala": 15,
+"tag": "rápido"
+},
+{
+"w": "e",
+"s": 35.153,
+"e": 35.256,
+"fala": 15,
+"tag": "rápido"
+},
+{
+"w": "quarenta",
+"s": 35.256,
+"e": 35.598,
+"fala": 15,
+"tag": "rápido"
+},
+{
+"w": "e",
+"s": 35.598,
+"e": 35.701,
+"fala": 15,
+"tag": "rápido"
+},
+{
+"w": "sete.",
+"s": 35.701,
+"e": 35.94,
+"fala": 15,
+"tag": "rápido"
+},
+{
+"w": "Só",
+"s": 35.94,
+"e": 36.38,
+"fala": 16,
+"tag": "suspense"
+},
+{
+"w": "que",
+"s": 36.38,
+"e": 36.46,
+"fala": 16,
+"tag": "suspense"
+},
+{
+"w": "esse",
+"s": 36.46,
+"e": 36.54,
+"fala": 16,
+"tag": "suspense"
+},
+{
+"w": "padrão",
+"s": 36.54,
+"e": 36.76,
+"fala": 16,
+"tag": "suspense"
+},
+{
+"w": "tem",
+"s": 36.76,
+"e": 36.88,
+"fala": 16,
+"tag": "suspense"
+},
+{
+"w": "nome.",
+"s": 36.88,
+"e": 37.12,
+"fala": 16,
+"tag": "suspense"
+},
+{
+"w": "Fracionamento.",
+"s": 37.58,
+"e": 38.22,
+"fala": 17,
+"tag": "ênfase"
+},
+{
+"w": "É",
+"s": 38.74,
+"e": 38.88,
+"fala": 18,
+"tag": "sério"
+},
+{
+"w": "exatamente",
+"s": 38.88,
+"e": 39.18,
+"fala": 18,
+"tag": "sério"
+},
+{
+"w": "o",
+"s": 39.18,
+"e": 39.44,
+"fala": 18,
+"tag": "sério"
+},
+{
+"w": "que",
+"s": 39.44,
+"e": 39.44,
+"fala": 18,
+"tag": "sério"
+},
+{
+"w": "o",
+"s": 39.44,
+"e": 39.5,
+"fala": 18,
+"tag": "sério"
+},
+{
+"w": "banco",
+"s": 39.5,
+"e": 39.62,
+"fala": 18,
+"tag": "sério"
+},
+{
+"w": "foi",
+"s": 39.62,
+"e": 39.8,
+"fala": 18,
+"tag": "sério"
+},
+{
+"w": "treinado",
+"s": 39.8,
+"e": 40.12,
+"fala": 18,
+"tag": "sério"
+},
+{
+"w": "para",
+"s": 40.12,
+"e": 40.24,
+"fala": 18,
+"tag": "sério"
+},
+{
+"w": "procurar.",
+"s": 40.24,
+"e": 40.5,
+"fala": 18,
+"tag": "sério"
+},
+{
+"w": "E",
+"s": 40.96,
+"e": 41.04,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "no",
+"s": 41.04,
+"e": 41.12,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "ano",
+"s": 41.12,
+"e": 41.2,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "que",
+"s": 41.2,
+"e": 41.3,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "vem,",
+"s": 41.3,
+"e": 41.38,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "a",
+"s": 41.6,
+"e": 41.64,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "Receita",
+"s": 41.64,
+"e": 41.86,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "vai",
+"s": 41.86,
+"e": 41.96,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "perguntar",
+"s": 41.96,
+"e": 42.28,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "de",
+"s": 42.28,
+"e": 42.36,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "onde",
+"s": 42.36,
+"e": 42.38,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "veio.",
+"s": 42.38,
+"e": 42.58,
+"fala": 19,
+"tag": "sério"
+},
+{
+"w": "Dia",
+"s": 42.58,
+"e": 42.941,
+"fala": 20,
+"tag": "sério"
+},
+{
+"w": "três.",
+"s": 42.941,
+"e": 43.447,
+"fala": 20,
+"tag": "sério"
+},
+{
+"w": "Um",
+"s": 43.447,
+"e": 43.736,
+"fala": 20,
+"tag": "sério"
+},
+{
+"w": "milhão",
+"s": 43.736,
+"e": 44.315,
+"fala": 20,
+"tag": "sério"
+},
+{
+"w": "e",
+"s": 44.315,
+"e": 44.531,
+"fala": 20,
+"tag": "sério"
+},
+{
+"w": "oitocentos",
+"s": 44.531,
+"e": 45.399,
+"fala": 20,
+"tag": "sério"
+},
+{
+"w": "mil",
+"s": 45.399,
+"e": 45.76,
+"fala": 20,
+"tag": "sério"
+},
+{
+"w": "escondidos",
+"s": 45.76,
+"e": 46.12,
+"fala": 20,
+"tag": "sério"
+},
+{
+"w": "em",
+"s": 46.12,
+"e": 46.22,
+"fala": 20,
+"tag": "sério"
+},
+{
+"w": "casa.",
+"s": 46.22,
+"e": 46.46,
+"fala": 20,
+"tag": "sério"
+},
+{
+"w": "E",
+"s": 46.88,
+"e": 46.96,
+"fala": 21,
+"tag": "irônico"
+},
+{
+"w": "nenhuma",
+"s": 46.96,
+"e": 47.12,
+"fala": 21,
+"tag": "irônico"
+},
+{
+"w": "explicação.",
+"s": 47.12,
+"e": 47.52,
+"fala": 21,
+"tag": "irônico"
+},
+{
+"w": "Você",
+"s": 48.3,
+"e": 48.46,
+"fala": 22,
+"tag": "suspense"
+},
+{
+"w": "pode",
+"s": 48.46,
+"e": 48.58,
+"fala": 22,
+"tag": "suspense"
+},
+{
+"w": "devolver",
+"s": 48.58,
+"e": 48.88,
+"fala": 22,
+"tag": "suspense"
+},
+{
+"w": "e",
+"s": 48.88,
+"e": 48.96,
+"fala": 22,
+"tag": "suspense"
+},
+{
+"w": "ficar",
+"s": 48.96,
+"e": 49.1,
+"fala": 22,
+"tag": "suspense"
+},
+{
+"w": "com",
+"s": 49.1,
+"e": 49.2,
+"fala": 22,
+"tag": "suspense"
+},
+{
+"w": "a",
+"s": 49.2,
+"e": 49.22,
+"fala": 22,
+"tag": "suspense"
+},
+{
+"w": "recompensa.",
+"s": 49.22,
+"e": 49.58,
+"fala": 22,
+"tag": "suspense"
+},
+{
+"w": "Ou",
+"s": 50.2,
+"e": 50.24,
+"fala": 22,
+"tag": "suspense"
+},
+{
+"w": "pode",
+"s": 50.24,
+"e": 50.46,
+"fala": 22,
+"tag": "suspense"
+},
+{
+"w": "arriscar.",
+"s": 50.46,
+"e": 50.86,
+"fala": 22,
+"tag": "suspense"
+},
+{
+"w": "Comenta:",
+"s": 51.38,
+"e": 51.84,
+"fala": 23,
+"tag": "ênfase"
+},
+{
+"w": "devolver",
+"s": 52.16,
+"e": 52.58,
+"fala": 23,
+"tag": "ênfase"
+},
+{
+"w": "ou",
+"s": 52.58,
+"e": 52.96,
+"fala": 23,
+"tag": "ênfase"
+},
+{
+"w": "arriscar.",
+"s": 52.96,
+"e": 53.34,
+"fala": 23,
+"tag": "ênfase"
+},
+{
+"w": "A",
+"s": 53.8,
+"e": 53.94,
+"fala": 24,
+"tag": "sério"
+},
+{
+"w": "parte",
+"s": 53.94,
+"e": 54.086,
+"fala": 24,
+"tag": "sério"
+},
+{
+"w": "dois",
+"s": 54.086,
+"e": 54.211,
+"fala": 24,
+"tag": "sério"
+},
+{
+"w": "segue",
+"s": 54.211,
+"e": 54.357,
+"fala": 24,
+"tag": "sério"
+},
+{
+"w": "o",
+"s": 54.357,
+"e": 54.42,
+"fala": 24,
+"tag": "sério"
+},
+{
+"w": "que",
+"s": 54.42,
+"e": 54.5,
+"fala": 24,
+"tag": "sério"
+},
+{
+"w": "você",
+"s": 54.5,
+"e": 54.52,
+"fala": 24,
+"tag": "sério"
+},
+{
+"w": "escolher.",
+"s": 54.52,
+"e": 54.78,
+"fala": 24,
+"tag": "sério"
+}
+]

@@ -59,7 +59,7 @@ Tudo em português do Brasil (ver `CLAUDE.md`). Respostas curtas: o usuário pre
 
 ## 7. Render, legenda e som
 - Render em segundo plano, em 720p por enquanto (pedido do usuário) e em blocos (sobrevive a reinícios):
-  `bash testes/teste-2/render_blocos.sh <Comp> <quadros> <pasta_blocos> <saida.mp4> 100 0.6667`. Antes (1080p, um só processo):
+  `bash testes/teste-2/render_blocos.sh <Comp> <quadros> <pasta_blocos> <saida.mp4> 100 0.75` (810x1440; 0,6667 dá altura não inteira e falha). Antes (1080p, um só processo):
   `nohup npx remotion render <Comp> out/<slug>-sem-audio.mp4 --gl=swangle --concurrency=2 --props='{"audio":""}' --muted &`
   e agendar uma verificação com `send_later` (~90 min).
 - Legenda (o usuário quer): camada transparente separada, sem refazer o 3D — composição tipo

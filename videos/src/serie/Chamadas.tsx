@@ -63,14 +63,23 @@ export const FaixaVoto: React.FC<{ pergunta: string; a: string; b: string }> = (
 };
 
 /** Capa do Reel: a ilustração do usuário com o título grande. */
-export const Capa: React.FC<{ imagem: string; linha1: string; destaque: string; rodape: string }> = ({ imagem, linha1, destaque, rodape }) => (
+export const Capa: React.FC<{
+  imagem?: string;
+  /** Fundo desenhado (ex.: uma <Cena>) quando não há ilustração. */
+  fundo?: React.ReactNode;
+  linha1: string;
+  destaque: string;
+  rodape: string;
+  /** Altura do título; 420+ fica dentro do recorte 3:4 da grade do perfil. */
+  topo?: number;
+}> = ({ imagem, fundo, linha1, destaque, rodape, topo = 250 }) => (
   <AbsoluteFill style={{ background: "#000" }}>
-    <Img src={staticFile(imagem)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+    {imagem ? <Img src={staticFile(imagem)} style={{ width: "100%", height: "100%", objectFit: "cover" }} /> : fundo}
     <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 70%, rgba(0,0,0,.6) 100%)" }} />
     <div
       style={{
         position: "absolute",
-        top: 250,
+        top: topo,
         left: 40,
         right: 40,
         textAlign: "center",

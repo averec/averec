@@ -4,9 +4,9 @@ import { COR, FONTE } from "./tema";
 import type { Humor } from "./Personagem";
 import { arteDoPersonagem, PersonagemImagem } from "./PersonagemImagem";
 import { CenarioParede } from "./CenarioParede";
-import { CenarioBanco, CenarioEscritorio, CenarioRua } from "./Cenarios";
+import { CenarioBanco, CenarioEscritorio, CenarioMafia, CenarioRua } from "./Cenarios";
 
-export type Cenario = "parede" | "banco" | "rua" | "escritorio";
+export type Cenario = "parede" | "banco" | "rua" | "escritorio" | "mafia";
 
 export type CenaProps = {
   /** Ilustração em public/ (ex.: "ep01/cenas/parede.png"). Sem ela, desenha o placeholder. */
@@ -28,12 +28,14 @@ const FUNDOS: Record<Cenario, string> = {
   banco: "linear-gradient(180deg, #b9c6cf 0%, #e9e3d6 55%, #8c7b63 100%)",
   rua: "linear-gradient(180deg, #f2a65a 0%, #d9cfc0 50%, #6f6a63 100%)",
   escritorio: "linear-gradient(180deg, #4a5560 0%, #8d9aa3 60%, #3b3f43 100%)",
+  mafia: "#1a1210",
 };
 
 const Objetos: React.FC<{ cenario: Cenario }> = ({ cenario }) => {
   if (cenario === "parede") return <CenarioParede />;
   if (cenario === "banco") return <CenarioBanco />;
   if (cenario === "escritorio") return <CenarioEscritorio />;
+  if (cenario === "mafia") return <CenarioMafia />;
   return <CenarioRua />;
 };
 

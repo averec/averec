@@ -48,7 +48,17 @@ const Caixa: React.FC<{ rotulo: string; valor: string; alerta?: boolean }> = ({ 
   </div>
 );
 
-export const Hud: React.FC<{ marcos: EstadoHud[]; inicio: number; rotulo?: string }> = ({ marcos, inicio, rotulo }) => {
+/** Rótulos e formato do placar por episódio (padrão: dinheiro, banco, suspeita). */
+export type ConfigHud = {
+  rotulos?: [string, string, string];
+  /** Formato do segundo campo: valor em reais ou número simples (ex.: homens). */
+  formatoBanco?: "reais" | "numero";
+};
+
+const numero = (v: number) => Math.round(v).toLocaleString("pt-BR").replace(/,/g, ".");
+
+export const Hud: React.FC<{ marcos: EstadoHud[]; inicio: number; rotulo?: string; config?: ConfigHud }> = ({ marcos, inicio, rotulo, config }) => {
+  const [r1, r2, r3] = config?.rotulos ?? ["DINHEIRO", "NO BANCO", "SUSPEITA"];
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = f / fps + inicio;
@@ -56,9 +66,9 @@ export const Hud: React.FC<{ marcos: EstadoHud[]; inicio: number; rotulo?: strin
   return (
     <div style={{ position: "absolute", top: 130, left: 40, right: 40 }}>
       <div style={{ display: "flex", gap: 12 }}>
-        <Caixa rotulo="DINHEIRO" valor={reais(e.dinheiro)} />
-        <Caixa rotulo="NO BANCO" valor={reais(e.banco)} />
-        <Caixa rotulo="SUSPEITA" valor={`${Math.round(e.suspeita)}%`} alerta={e.suspeita > 0.5} />
+        <Caixa rotulo={r1} valor={reais(e.dinheiro)} />
+        <Caixa rotulo={r2} valor={config?.formatoBanco === "numero" ? numero(e.banco) : reais(e.banco)} />
+        <Caixa rotulo={r3} valor={`${Math.round(e.suspeita)}%`} alerta={e.suspeita > 0.5} />
       </div>
       {rotulo && (
         <div

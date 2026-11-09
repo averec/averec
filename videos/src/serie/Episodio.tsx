@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Cena, CenaProps } from "./Cena";
-import { EstadoHud, Hud } from "./Hud";
+import { ConfigHud, EstadoHud, Hud } from "./Hud";
 import { Legenda, Palavra } from "./Legenda";
 
 export type Bloco =
@@ -12,6 +12,7 @@ export type DadosEpisodio = {
   audio: string;
   palavras: Palavra[];
   hud: EstadoHud[];
+  configHud?: ConfigHud;
   blocos: Bloco[];
   duracao: number;
 };
@@ -48,7 +49,7 @@ export const Episodio: React.FC<{ dados: DadosEpisodio }> = ({ dados }) => {
             {b.tipo === "cena" ? (
               <>
                 <Cena {...b.cena} />
-                {b.hud && <Hud marcos={dados.hud} inicio={b.de} rotulo={b.rotuloHud} />}
+                {b.hud && <Hud marcos={dados.hud} inicio={b.de} rotulo={b.rotuloHud} config={dados.configHud} />}
                 {b.sobre}
               </>
             ) : (

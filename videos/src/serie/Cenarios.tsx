@@ -237,3 +237,49 @@ export const CenarioRua: React.FC = () => {
     </svg>
   );
 };
+
+/** Escritório do chefão: madeira escura, persiana com luz da cidade, mesa grande, cofre e abajur. */
+export const CenarioMafia: React.FC = () => (
+  <Sala
+    id="mafia"
+    estampa="listras"
+    cores={{ parede: "#4a2a22", paredeSombra: "#3a201a", estampa: "#55322a", teto: "#24150f", rodape: "#1c100c", piso: "#5a1f22", pisoLinha: "#3d1416" }}
+    lateral={
+      <g>
+        {/* persiana com a cidade à noite atrás */}
+        <polygon points="60,420 300,470 300,940 60,930" fill="#0f1a2e" {...Contorno} />
+        {Array.from({ length: 13 }).map((_, i) => (
+          <polygon key={i} points={`60,${440 + i * 37} 300,${490 + i * 35} 300,${504 + i * 35} 60,${454 + i * 37}`} fill="#c99a4a" opacity={0.85} />
+        ))}
+      </g>
+    }
+    fundo={
+      <g>
+        {/* quadro com moldura dourada */}
+        <rect x="560" y="330" width="300" height="220" fill="#b8892f" {...Contorno} />
+        <rect x="584" y="354" width="252" height="172" fill="#2f4a3a" />
+        <path d="M584 526 L660 440 L720 490 L780 430 L836 526 Z" fill="#6f8a5a" />
+        {/* cofre */}
+        <rect x="900" y="760" width="150" height="180" rx="10" fill="#6b6f74" {...Contorno} />
+        <circle cx="975" cy="850" r="38" fill="#9aa0a6" {...Contorno} strokeWidth={5} />
+        <line x1="975" y1="850" x2="1000" y2="830" stroke={TINTA} strokeWidth={6} />
+        {/* mesa grande */}
+        <rect x="380" y="960" width="600" height="70" rx="8" fill="#6e3b22" {...Contorno} />
+        <rect x="420" y="1030" width="520" height="430" fill="#5a2f1b" {...Contorno} />
+        <rect x="470" y="1080" width="180" height="300" rx="8" fill="#4e2816" {...Contorno} strokeWidth={5} />
+        <rect x="710" y="1080" width="180" height="300" rx="8" fill="#4e2816" {...Contorno} strokeWidth={5} />
+        {/* abajur verde e maços de dinheiro na mesa */}
+        <rect x="430" y="900" width="14" height="62" fill="#c9a24a" {...Contorno} strokeWidth={4} />
+        <path d="M390 905 L484 905 L470 860 L404 860 Z" fill="#2f7a4a" {...Contorno} strokeWidth={5} />
+        {[0, 1, 2].map((i) => (
+          <g key={i}>
+            <rect x={760 + i * 22} y={928 - i * 14} width="110" height="34" rx="4" fill="#8CC48A" {...Contorno} strokeWidth={4} />
+            <rect x={805 + i * 22} y={926 - i * 14} width="18" height="38" fill="#E9DFC4" stroke={TINTA} strokeWidth={3} />
+          </g>
+        ))}
+        {/* luz quente do abajur */}
+        <ellipse cx="440" cy="960" rx="260" ry="120" fill="#ffcf6a" opacity={0.12} />
+      </g>
+    }
+  />
+);

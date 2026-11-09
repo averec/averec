@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Renderiza uma composição em blocos (pula os blocos já prontos) e junta no fim; sobrevive a reinícios do container.
 # Uso: bash testes/teste-2/render_blocos.sh <Composicao> <total_quadros> <pasta_blocos> <saida.mp4> [tamanho_bloco] [escala]
-# escala 0.6667 = 720x1280 (cerca de 2x mais rápido; o finalizar.sh amplia para 1080x1920)
+# escala 0.75 = 810x1440 (a 0,6667 o Remotion recusa: altura não inteira); o finalizar.sh amplia para 1080x1920
 set -uo pipefail
 C="$1"; T="$2"; D="$3"; OUT="$4"; B="${5:-100}"; E="${6:-1}"
 mkdir -p "$D"; cd /home/user/averec/videos
